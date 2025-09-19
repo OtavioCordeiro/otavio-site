@@ -1,4 +1,4 @@
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Code, Server, Database } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
@@ -17,58 +17,71 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      <div className="absolute inset-0 gradient-hero opacity-10" />
-      <div className="container mx-auto px-4 text-center relative z-10">
-        <div className="max-w-4xl mx-auto animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
-            Otavio Cordeiro Lopes
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
+      <div className="absolute inset-0 bg-[url('/images/otavio1.png')] bg-cover bg-center bg-no-repeat" />
+      <div className="absolute inset-0 bg-black/30" />
+
+      <div className="container mx-auto px-4 text-left relative z-10">
+        <div className="max-w-4xl animate-fade-in">
+          <div className="flex justify-start mb-8">
+            <div className="flex space-x-4 text-blue-400">
+              <Server className="h-8 w-8 animate-pulse" />
+              <Database className="h-8 w-8 animate-pulse delay-100" />
+              <Code className="h-8 w-8 animate-pulse delay-200" />
+            </div>
+          </div>
+
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-blue-400 bg-clip-text text-transparent">
+            Otávio Cordeiro
           </h1>
-          <h2 className="text-2xl md:text-3xl text-muted-foreground font-light mb-8">
-            Desenvolvedor .NET Fullstack
+          <h2 className="text-2xl md:text-3xl text-blue-300 font-light mb-4">
+            Especialista em Arquiteturas Escaláveis
           </h2>
-          <p className="text-xl md:text-2xl text-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            Transformo ideias em soluções digitais eficientes, escaláveis e seguras
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl leading-relaxed">
+            Desenvolvedor Full Stack especializado em .NET, apaixonado por criar soluções que fazem a diferença na vida das pessoas. Trabalho construindo aplicações escaláveis e seguras com mais de 10 anos de experiência.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <Button 
+          <h3 className="text-lg md:text-xl text-gray-400 mb-12">
+            APIs • Microserviços • Cloud • DevOps
+          </h3>
+
+          <div className="flex flex-col sm:flex-row gap-6 justify-start items-start mb-16">
+            <Button
               onClick={scrollToPortfolio}
-              className="btn-hero text-lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white border-none text-lg px-8 py-4 transition-all duration-300 transform hover:scale-105"
             >
-              Veja meu portfólio
+              Ver Projetos
             </Button>
-            <Button 
+            <Button
               variant="outline"
               onClick={scrollToContact}
-              className="text-primary border-primary hover:bg-primary hover:text-primary-foreground transition-smooth text-lg px-8 py-4"
+              className="text-blue-400 border-blue-400 hover:bg-blue-400 hover:text-black transition-all duration-300 text-lg px-8 py-4"
             >
-              Entre em contato
+              Contratar Serviços
             </Button>
           </div>
-          
-          <div className="flex justify-center space-x-6">
-            <a 
-              href="https://github.com/OtavioCordeiro" 
-              target="_blank" 
+
+          <div className="flex justify-start space-x-6">
+            <a
+              href="https://github.com"
+              target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-smooth transform hover:scale-110"
+              className="text-gray-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-110"
             >
               <Github className="h-8 w-8" />
             </a>
-            <a 
-              href="https://www.linkedin.com/in/otavio-cordeiro-lopes-4aa16788" 
-              target="_blank" 
+            <a
+              href="https://linkedin.com"
+              target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-smooth transform hover:scale-110"
+              className="text-gray-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-110"
             >
               <Linkedin className="h-8 w-8" />
-            </a>            
+            </a>
           </div>
         </div>
-        
+
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown className="h-6 w-6 text-primary" />
+          <ArrowDown className="h-6 w-6 text-blue-400" />
         </div>
       </div>
     </section>
