@@ -1,4 +1,4 @@
-import { ArrowDown, Github, Linkedin, Code, Server, Database } from 'lucide-react';
+import { Github, Linkedin, Code, Server, Database } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
@@ -80,9 +80,6 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown className="h-6 w-6 text-blue-400" />
-        </div>
       </div>
     </section>
   );

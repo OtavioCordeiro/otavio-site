@@ -1,137 +1,138 @@
-import { Code, Database, Cloud, Zap, Server, Cpu, Shield, GitBranch } from 'lucide-react';
+import { User, Heart, Target, Star, Users } from 'lucide-react';
 
 const About = () => {
-  const skillCategories = [
+  const values = [
     {
-      title: 'Backend Development',
-      icon: <Server className="h-6 w-6" />,
-      skills: ['Node.js', 'Python', 'Java', 'C#/.NET', 'Go', 'Express.js'],
-      color: 'from-blue-500 to-blue-700'
+      title: "Pessoas em primeiro lugar",
+      description: "Todo grande projeto nasce de boas conexões",
+      icon: <Users className="h-6 w-6" />
     },
     {
-      title: 'APIs & Microservices',
-      icon: <Zap className="h-6 w-6" />,
-      skills: ['REST APIs', 'GraphQL', 'gRPC', 'Microservices', 'WebSockets', 'Event-Driven'],
-      color: 'from-blue-600 to-blue-800'
+      title: "Família e amor",
+      description: "Minha base e inspiração",
+      icon: <Heart className="h-6 w-6" />
     },
     {
-      title: 'Databases',
-      icon: <Database className="h-6 w-6" />,
-      skills: ['PostgreSQL', 'MongoDB', 'Redis', 'MySQL', 'Elasticsearch', 'DynamoDB'],
-      color: 'from-blue-700 to-blue-900'
+      title: "Investimento",
+      description: "Conhecimento e tecnologia como caminho para o futuro",
+      icon: <Target className="h-6 w-6" />
     },
     {
-      title: 'Cloud & DevOps',
-      icon: <Cloud className="h-6 w-6" />,
-      skills: ['AWS', 'Docker', 'Kubernetes', 'CI/CD', 'Terraform', 'Jenkins'],
-      color: 'from-blue-500 to-blue-800'
+      title: "Verdade e honestidade",
+      description: "Valores que guiam minha vida pessoal e profissional",
+      icon: <Star className="h-6 w-6" />
     },
     {
-      title: 'Architecture',
-      icon: <Cpu className="h-6 w-6" />,
-      skills: ['Clean Architecture', 'DDD', 'CQRS', 'Event Sourcing', 'SOLID', 'Design Patterns'],
-      color: 'from-blue-600 to-blue-900'
-    },
-    {
-      title: 'Security & Tools',
-      icon: <Shield className="h-6 w-6" />,
-      skills: ['OAuth/JWT', 'SSL/TLS', 'Git', 'Testing', 'Monitoring', 'Logging'],
-      color: 'from-blue-700 to-blue-900'
+      title: "Crescimento constante",
+      description: "Evolução contínua como profissional e ser humano",
+      icon: <User className="h-6 w-6" />
     }
   ];
 
   return (
-    <section id="about" className="py-20 bg-gray-900">
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-20 relative overflow-hidden bg-gray-800">
+      <div className="absolute inset-0 bg-[url('/images/seção2.png?v=2')] bg-cover bg-center bg-no-repeat" />
+      <div className="absolute inset-0 bg-black/50" />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Especialização Backend
+            Sobre Mim
           </h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full mb-8" />
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Desenvolvo sistemas robustos, APIs escaláveis e arquiteturas de software que suportam milhões de usuários
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-4">
+            "Mais do que código, acredito em propósito, inovação e pessoas."
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
-          <div className="space-y-6">
-            <div className="bg-gray-800 p-8 rounded-2xl border border-gray-700">
-              <h3 className="text-2xl font-bold text-blue-400 mb-4 flex items-center">
-                <GitBranch className="h-6 w-6 mr-3" />
-                Experiência Sólida
-              </h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-start">
-                  <span className="text-blue-500 mr-2">•</span>
-                  5+ anos desenvolvendo sistemas backend de alta performance
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-500 mr-2">•</span>
-                  Especialista em arquiteturas de microserviços
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-500 mr-2">•</span>
-                  Experiência com sistemas distribuídos em cloud
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-500 mr-2">•</span>
-                  Otimização de performance e escalabilidade
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="space-y-6">
-            <div className="bg-gray-800 p-8 rounded-2xl border border-gray-700">
-              <h3 className="text-2xl font-bold text-blue-400 mb-4 flex items-center">
-                <Code className="h-6 w-6 mr-3" />
-                Abordagem Profissional
-              </h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-start">
-                  <span className="text-blue-500 mr-2">•</span>
-                  Clean Code e Test-Driven Development (TDD)
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-500 mr-2">•</span>
-                  Documentação técnica completa e clara
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-500 mr-2">•</span>
-                  Delivery contínuo com CI/CD
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-500 mr-2">•</span>
-                  Monitoramento e observabilidade de sistemas
-                </li>
-              </ul>
-            </div>
+        <div className="max-w-6xl mx-auto mb-16">
+          <div className="px-8 pt-2 pb-8 text-center">
+            <p className="text-white text-xl leading-relaxed mb-6 drop-shadow-lg">
+              Desenvolvedor full stack com mais de 10 anos de experiência, Sou alguém guiado por propósito, fé e paixão, acredito no poder da tecnologia para transformar e facilitar a vida das pessoas.
+            </p>
+            <p className="text-white text-xl leading-relaxed mb-6 drop-shadow-lg">
+              Minha jornada na programação começou em 2011, de forma simples, com um curso de HTML em uma pequena escola de bairro. No ano seguinte, aprofundei meus estudos em um curso técnico de informática, onde descobri a verdadeira lógica de programação — e ali descobri minha paixão.
+            </p>
+            <p className="text-white text-xl leading-relaxed mb-6 drop-shadow-lg">
+              O grande ponto de virada veio em 2014, quando fui contratado pela Mundipagg, o início de um sonho que mais tarde se tornou a Stone, uma das maiores companhias de pagamentos do Brasil. Ali encontrei pessoas que acreditaram em mim não apenas pelo que eu sabia, mas por minha dedicação, meu raciocínio lógico e força de vontade. Com isso, no mesmo ano comecei minha faculdade. Essa confiança moldou minha trajetória e me tornou o profissional que sou hoje.
+            </p>
+            <p className="text-white text-xl leading-relaxed drop-shadow-lg">
+              Desde então, já se passaram mais de 10 anos de experiência, atuando em empresas de diferentes portes e segmentos, sempre com o mesmo objetivo: criar soluções que realmente importam, entregando além do que foi pedido e impactando positivamente os projetos e as pessoas ao meu redor.
+            </p>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skillCategories.map((category, index) => (
-            <div
-              key={category.title}
-              className="bg-gray-800 border border-gray-700 rounded-xl p-6 hover:border-blue-500 transition-all duration-300 transform hover:scale-105"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center text-white mb-4`}>
-                {category.icon}
+
+        <div className="text-center">
+          <h3 className="text-2xl font-bold text-white mb-4 drop-shadow-lg">Meus valores</h3>
+          <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full mb-12" />
+
+          <div className="relative">
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+              <div className="text-center">
+                <div className="text-6xl font-bold text-gray-400 mb-2">01</div>
+                <div className="flex justify-center mb-4 relative">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full z-10"></div>
+                </div>
+                <h4 className="text-xl font-bold text-white mb-3 drop-shadow-lg">Pessoas em 1° lugar</h4>
+                <p className="text-gray-300 text-sm drop-shadow-lg">
+                  Todo grande projeto nasce de
+                  boas conexões
+                </p>
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-white">{category.title}</h3>
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1 bg-blue-600/20 text-blue-300 text-sm rounded-full border border-blue-500/30 hover:bg-blue-500/30 transition-colors"
-                  >
-                    {skill}
-                  </span>
-                ))}
+
+              <div className="text-center">
+                <div className="text-6xl font-bold text-gray-400 mb-2">02</div>
+                <div className="flex justify-center mb-4 relative">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full z-10"></div>
+                </div>
+                <h4 className="text-xl font-bold text-white mb-3 drop-shadow-lg">Família e amor</h4>
+                <p className="text-gray-300 text-sm drop-shadow-lg">
+                  Minha base e inspiração
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="text-6xl font-bold text-gray-400 mb-2">03</div>
+                <div className="flex justify-center mb-4 relative">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full z-10"></div>
+                </div>
+                <h4 className="text-xl font-bold text-white mb-3 drop-shadow-lg">Investimento</h4>
+                <p className="text-gray-300 text-sm drop-shadow-lg">
+                  Conhecimento e tecnologia como
+                  caminho para o futuro
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="text-6xl font-bold text-gray-400 mb-2">04</div>
+                <div className="flex justify-center mb-4 relative">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full z-10"></div>
+                </div>
+                <h4 className="text-xl font-bold text-white mb-3 drop-shadow-lg">Verdade e honestidade</h4>
+                <p className="text-gray-300 text-sm drop-shadow-lg">
+                  Valores que guiam minha vida
+                  pessoal e profissional
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="text-6xl font-bold text-gray-400 mb-2">05</div>
+                <div className="flex justify-center mb-4 relative">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full z-10"></div>
+                </div>
+                <h4 className="text-xl font-bold text-white mb-3 drop-shadow-lg">Crescimento constante</h4>
+                <p className="text-gray-300 text-sm drop-shadow-lg">
+                  Evolução contínua como
+                  profissional e ser humano
+                </p>
               </div>
             </div>
-          ))}
+
+            {/* Linha conectando as bolinhas */}
+            <div className="absolute top-[71px] left-0 right-0 hidden lg:block">
+              <div className="h-0.5 bg-gray-500/50 mx-auto" style={{width: '76%'}}></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
