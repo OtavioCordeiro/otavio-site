@@ -6,67 +6,37 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: 'Sistema de E-commerce',
+      title: 'NotifyG',
       category: 'Web',
-      description: 'Plataforma completa de vendas online com .NET Core, integração de pagamentos e painel administrativo.',
+      description: 'Plataforma com sistema de apps temáticos. Usuários escolhem apps como "Joel Jota" (podcasts diários) e "Grão de Fé" (mensagens bíblicas) e recebem conteúdo texto + áudio no canal preferido.',
       image: '/placeholder.svg',
-      technologies: ['.NET Core', 'React', 'SQL Server', 'Stripe'],
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://example.com'
+      technologies: ['React', 'Node.js', 'MongoDB', 'API Integration', 'Multi-channel'],
+      githubUrl: '#',
+      liveUrl: 'https://notifyg.com'
     },
     {
       id: 2,
-      title: 'Bot WhatsApp Business',
+      title: 'Bot de Tradução',
       category: 'Bots',
-      description: 'Automatização completa de atendimento ao cliente com IA e integração com CRM.',
+      description: 'Bot automático de tradução para salas de conversa que traduz mensagens do português para inglês e vice-versa em tempo real.',
       image: '/placeholder.svg',
-      technologies: ['Python', 'WppConnect', 'RabbitMQ', 'MongoDB'],
+      technologies: ['Python', 'Google Translate API', 'WebSocket', 'Threading'],
       githubUrl: 'https://github.com',
-      liveUrl: 'https://example.com'
+      liveUrl: '#'
     },
     {
       id: 3,
-      title: 'API Microserviços',
-      category: 'Cloud',
-      description: 'Arquitetura de microserviços escalável em AWS com Docker e Kubernetes.',
-      image: '/placeholder.svg',
-      technologies: ['.NET 8', 'Docker', 'AWS', 'Kubernetes'],
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://example.com'
-    },
-    {
-      id: 4,
-      title: 'Dashboard Analytics',
+      title: 'Lista - Site de Listas de Presentes',
       category: 'Web',
-      description: 'Sistema de analytics em tempo real com visualizações interativas e relatórios.',
+      description: 'Plataforma web para criação e compartilhamento de listas de presentes, facilitando a organização de eventos e celebrações.',
       image: '/placeholder.svg',
-      technologies: ['React', 'D3.js', 'PostgreSQL', 'Redis'],
+      technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
       githubUrl: 'https://github.com',
-      liveUrl: 'https://example.com'
-    },
-    {
-      id: 5,
-      title: 'Sistema de Automação',
-      category: 'Bots',
-      description: 'Robô de automação de processos empresariais com interface web para configuração.',
-      image: '/placeholder.svg',
-      technologies: ['C#', 'Selenium', 'Angular', 'MySQL'],
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://example.com'
-    },
-    {
-      id: 6,
-      title: 'Infraestrutura Cloud',
-      category: 'Cloud',
-      description: 'Deploy automatizado com CI/CD, monitoramento e backup em múltiplas regiões.',
-      image: '/placeholder.svg',
-      technologies: ['Azure', 'Terraform', 'GitHub Actions', 'Grafana'],
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://example.com'
+      liveUrl: '#'
     }
   ];
 
-  const categories = ['Todos', 'Web', 'Bots', 'Cloud'];
+  const categories = ['Todos', 'Web', 'Bots'];
   const [activeCategory, setActiveCategory] = useState('Todos');
 
   const filteredProjects = activeCategory === 'Todos' 
