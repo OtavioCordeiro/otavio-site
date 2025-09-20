@@ -32,7 +32,7 @@ const Hero = () => {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-blue-400 bg-clip-text text-transparent">
-            Otávio Cordeiro
+            Otavio Lopes
           </h1>
           <h2 className="text-2xl md:text-3xl text-blue-300 font-light mb-4">
             Especialista em Arquiteturas Escaláveis
