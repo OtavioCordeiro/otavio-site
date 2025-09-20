@@ -42,7 +42,7 @@ const Header = () => {
               <Code className="h-6 w-6 text-white" />
             </div>
             <div className="text-xl font-bold text-white">
-              Backend<span className="text-blue-400">Dev</span>
+              Otavio<span className="text-blue-400">Lopes</span>
             </div>
           </div>
 
