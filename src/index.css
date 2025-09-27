@@ -173,4 +173,22 @@
   .project-card {
     @apply bg-card rounded-xl p-6 shadow-soft hover:shadow-medium transition-smooth transform hover:-translate-y-2;
   }
+
+  /* Card scroll animation */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 20s linear infinite;
+  }
+
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
 }

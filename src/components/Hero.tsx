@@ -35,13 +35,13 @@ const Hero = () => {
             Otavio Lopes
           </h1>
           <h2 className="text-2xl md:text-3xl text-blue-300 font-light mb-4">
-            Especialista em Arquiteturas Escaláveis
+            Criador de Soluções Digitais
           </h2>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl leading-relaxed">
-            Desenvolvedor Full Stack especializado em .NET, apaixonado por criar soluções que fazem a diferença na vida das pessoas. Trabalho construindo aplicações escaláveis e seguras com mais de 10 anos de experiência.
+            Especialista em transformar desafios em oportunidades através da tecnologia. Com mais de 10 anos de experiência, crio soluções digitais inovadoras que conectam pessoas, otimizam processos e impulsionam negócios. Trabalho com propósito: fazer a tecnologia servir às pessoas.
           </p>
           <h3 className="text-lg md:text-xl text-gray-400 mb-12">
-            APIs • Microserviços • Cloud • DevOps
+            Sistemas Completos • Infraestrutura Cloud • Processos Automatizados
           </h3>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-start items-start mb-16">
