@@ -20,7 +20,7 @@ const Header = () => {
     { href: '#about', label: 'Sobre' },
     { href: '#specialization', label: 'Especialização' },
     { href: '#portfolio', label: 'Projetos' },
-    { href: '#contact', label: 'Contratar' }
+    { href: '#contact', label: 'Contato' }
   ];
 
   const scrollToSection = (href: string) => {
@@ -60,14 +60,6 @@ const Header = () => {
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center space-x-4">
-            <Button
-              onClick={() => scrollToSection('#contact')}
-              className="bg-blue-600 hover:bg-blue-700 text-white border-none px-6 py-2 transition-all duration-300 transform hover:scale-105"
-            >
-              Solicitar Proposta
-            </Button>
-          </div>
 
           {/* Mobile Menu Button */}
           <Button
@@ -92,14 +84,6 @@ const Header = () => {
                 {item.label}
               </button>
             ))}
-            <div className="px-4 pt-4 border-t border-gray-700 mt-4">
-              <Button
-                onClick={() => scrollToSection('#contact')}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white border-none"
-              >
-                Solicitar Proposta
-              </Button>
-            </div>
           </nav>
         )}
       </div>

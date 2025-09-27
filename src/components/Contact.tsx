@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Calendar, DollarSign, Send, Github, Linkedin, Clock, CheckCircle } from 'lucide-react';
+import { Send, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -9,10 +9,6 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    company: '',
-    project: '',
-    budget: '',
-    timeline: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -33,167 +29,82 @@ const Contact = () => {
     // Simulate form submission
     setTimeout(() => {
       toast({
-        title: "Proposta enviada!",
-        description: "Analisarei seu projeto e retornarei em até 24h com uma proposta.",
+        title: "Mensagem enviada!",
+        description: "Obrigado pelo contato! Responderei em breve.",
       });
-      setFormData({ name: '', email: '', company: '', project: '', budget: '', timeline: '', message: '' });
+      setFormData({ name: '', email: '', message: '' });
       setIsSubmitting(false);
     }, 1000);
   };
 
-  const services = [
-    {
-      title: 'Desenvolvimento de APIs',
-      description: 'APIs REST e GraphQL escaláveis e seguras',
-      price: 'A partir de R$ 5.000',
-      timeline: '2-4 semanas'
-    },
-    {
-      title: 'Arquitetura de Microserviços',
-      description: 'Design e implementação de sistemas distribuídos',
-      price: 'A partir de R$ 15.000',
-      timeline: '4-8 semanas'
-    },
-    {
-      title: 'Migração para Cloud',
-      description: 'Modernização e migração de sistemas legados',
-      price: 'A partir de R$ 10.000',
-      timeline: '3-6 semanas'
-    },
-    {
-      title: 'Consultoria Técnica',
-      description: 'Auditoria, otimização e orientação técnica',
-      price: 'R$ 200/hora',
-      timeline: 'Flexível'
-    }
-  ];
 
   return (
     <section id="contact" className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Vamos Trabalhar Juntos
+            Entre em Contato
           </h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full mb-8" />
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Transforme sua ideia em realidade. Solicite uma proposta personalizada para seu projeto
+            Vamos trocar uma ideia? Adoraria conversar com você!
           </p>
         </div>
 
-        {/* Services Overview */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {services.map((service, index) => (
-            <div
-              key={service.title}
-              className="bg-gray-800 border border-gray-700 rounded-xl p-6 hover:border-blue-500 transition-all duration-300"
-            >
-              <h3 className="text-lg font-semibold text-white mb-3">{service.title}</h3>
-              <p className="text-gray-400 text-sm mb-4">{service.description}</p>
-              <div className="space-y-2">
-                <div className="flex items-center text-blue-400">
-                  <DollarSign className="h-4 w-4 mr-2" />
-                  <span className="text-sm">{service.price}</span>
-                </div>
-                <div className="flex items-center text-gray-400">
-                  <Clock className="h-4 w-4 mr-2" />
-                  <span className="text-sm">{service.timeline}</span>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
 
         <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
           {/* Contact Info */}
           <div>
-            <h3 className="text-2xl font-semibold mb-8 text-white">Como Funciona</h3>
+            <h3 className="text-2xl font-semibold mb-8 text-white">Conecte-se Comigo</h3>
 
-            <div className="space-y-6 mb-8">
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white text-sm font-bold">1</span>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Análise do Projeto</h4>
-                  <p className="text-gray-400">Entendo suas necessidades e objetivos do negócio</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white text-sm font-bold">2</span>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Proposta Técnica</h4>
-                  <p className="text-gray-400">Elaboro arquitetura, cronograma e orçamento detalhados</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white text-sm font-bold">3</span>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Desenvolvimento</h4>
-                  <p className="text-gray-400">Execução com atualizações constantes e transparência total</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white text-sm font-bold">4</span>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Entrega & Suporte</h4>
-                  <p className="text-gray-400">Deploy, documentação e suporte pós-entrega</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-800 p-6 rounded-xl border border-gray-700">
-              <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-                <CheckCircle className="h-5 w-5 mr-2 text-green-400" />
-                Garantias Incluídas
-              </h4>
+            <div className="bg-gray-800 p-6 rounded-xl border border-gray-700 mb-8">
+              <h4 className="text-lg font-semibold text-white mb-4">Vamos conversar sobre:</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>• Código limpo e documentado</li>
-                <li>• Testes automatizados</li>
-                <li>• Suporte técnico por 30 dias</li>
-                <li>• Documentação completa</li>
-                <li>• Deploy e configuração</li>
+                <li>• Tecnologia e desenvolvimento</li>
+                <li>• Projetos interessantes</li>
+                <li>• Experiências e aprendizados</li>
+                <li>• Qualquer assunto relacionado à tech</li>
               </ul>
             </div>
 
-            <div className="mt-8 flex space-x-4">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-lg text-gray-400 hover:text-blue-400 border border-gray-700 hover:border-blue-500 transition-all"
-              >
-                <Github className="h-6 w-6" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-lg text-gray-400 hover:text-blue-400 border border-gray-700 hover:border-blue-500 transition-all"
-              >
-                <Linkedin className="h-6 w-6" />
-              </a>
-              <a
-                href="mailto:contact@example.com"
-                className="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-lg text-gray-400 hover:text-blue-400 border border-gray-700 hover:border-blue-500 transition-all"
-              >
-                <Mail className="h-6 w-6" />
-              </a>
+            <div className="mt-8">
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="https://discord.gg/DShfpM7AJx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-lg text-gray-400 hover:text-indigo-400 border border-gray-700 hover:border-indigo-500 transition-all"
+                  title="Discord"
+                >
+                  <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.0189 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/OtavioCordeiro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-lg text-gray-400 hover:text-blue-400 border border-gray-700 hover:border-blue-500 transition-all"
+                  title="GitHub"
+                >
+                  <Github className="h-6 w-6" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/otavio-cordeiro-lopes-4aa16788/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-lg text-gray-400 hover:text-blue-400 border border-gray-700 hover:border-blue-500 transition-all"
+                  title="LinkedIn"
+                >
+                  <Linkedin className="h-6 w-6" />
+                </a>
+              </div>
             </div>
           </div>
 
           {/* Contact Form */}
           <div>
-            <h3 className="text-2xl font-semibold mb-8 text-white">Solicitar Proposta</h3>
+            <h3 className="text-2xl font-semibold mb-8 text-white">Deixe seu Contato</h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
@@ -230,84 +141,12 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                  Empresa
-                </label>
-                <Input
-                  id="company"
-                  name="company"
-                  type="text"
-                  value={formData.company}
-                  onChange={handleInputChange}
-                  className="bg-gray-800 border-gray-600 text-white placeholder:text-gray-400"
-                  placeholder="Nome da empresa"
-                />
-              </div>
 
-              <div>
-                <label htmlFor="project" className="block text-sm font-medium text-gray-300 mb-2">
-                  Tipo de Projeto *
-                </label>
-                <select
-                  id="project"
-                  name="project"
-                  value={formData.project}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full bg-gray-800 border border-gray-600 text-white rounded-md px-3 py-2"
-                >
-                  <option value="">Selecione...</option>
-                  <option value="api">Desenvolvimento de API</option>
-                  <option value="microservices">Arquitetura de Microserviços</option>
-                  <option value="cloud">Migração para Cloud</option>
-                  <option value="consulting">Consultoria Técnica</option>
-                  <option value="custom">Projeto Customizado</option>
-                </select>
-              </div>
 
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
-                    Orçamento Estimado
-                  </label>
-                  <select
-                    id="budget"
-                    name="budget"
-                    value={formData.budget}
-                    onChange={handleInputChange}
-                    className="w-full bg-gray-800 border border-gray-600 text-white rounded-md px-3 py-2"
-                  >
-                    <option value="">Selecione...</option>
-                    <option value="5k-10k">R$ 5.000 - R$ 10.000</option>
-                    <option value="10k-25k">R$ 10.000 - R$ 25.000</option>
-                    <option value="25k-50k">R$ 25.000 - R$ 50.000</option>
-                    <option value="50k+">R$ 50.000+</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="timeline" className="block text-sm font-medium text-gray-300 mb-2">
-                    Prazo Desejado
-                  </label>
-                  <select
-                    id="timeline"
-                    name="timeline"
-                    value={formData.timeline}
-                    onChange={handleInputChange}
-                    className="w-full bg-gray-800 border border-gray-600 text-white rounded-md px-3 py-2"
-                  >
-                    <option value="">Selecione...</option>
-                    <option value="urgent">Urgente (1-2 semanas)</option>
-                    <option value="normal">Normal (1-2 meses)</option>
-                    <option value="flexible">Flexível (3+ meses)</option>
-                  </select>
-                </div>
-              </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                  Descrição do Projeto *
+                  Mensagem *
                 </label>
                 <Textarea
                   id="message"
@@ -317,7 +156,7 @@ const Contact = () => {
                   required
                   rows={6}
                   className="bg-gray-800 border-gray-600 text-white placeholder:text-gray-400 resize-none"
-                  placeholder="Descreva seu projeto, objetivos e principais desafios..."
+                  placeholder="Conte um pouco sobre você ou o que gostaria de conversar..."
                 />
               </div>
 
@@ -331,13 +170,13 @@ const Contact = () => {
                 ) : (
                   <>
                     <Send className="h-5 w-5 mr-2" />
-                    Solicitar Proposta
+                    Enviar Mensagem
                   </>
                 )}
               </Button>
 
               <p className="text-xs text-gray-400 text-center">
-                Resposta em até 24 horas • Proposta sem compromisso
+                Responderei em breve • Vamos trocar uma ideia!
               </p>
             </form>
           </div>
