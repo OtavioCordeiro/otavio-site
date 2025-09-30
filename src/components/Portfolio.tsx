@@ -1,5 +1,6 @@
 import { ExternalLink, Github, Server, Database, Bell, List, Users, Bot } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { BackgroundBeams } from '@/components/ui/background-beams';
 
 const Portfolio = () => {
   const projects = [
@@ -39,7 +40,8 @@ const Portfolio = () => {
 
 
   return (
-    <section id="portfolio" className="py-20 bg-black">
+    <section id="portfolio" className="py-5 relative overflow-hidden bg-black">
+      <BackgroundBeams />
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
